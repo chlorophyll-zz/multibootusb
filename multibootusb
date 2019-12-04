@@ -229,4 +229,5 @@ if __name__ == '__main__':
         from scripts import usb
         for p in config.remounted_partitions:
             log('Unmouting %s at exit' % p)
+            os.sync() 
             usb.unmount(p)
